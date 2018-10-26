@@ -1,0 +1,106 @@
+<ui:composition  template="/WEB-INF/templates/Layout.xhtml"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:p="http://primefaces.org/ui">
+
+  <ui:define name="conteudo">
+       <h1 class="if-page-title">Cadastro de Carro</h1>
+       <h:form  id="frm" enctype="multipart/form-data">
+          <p:toolbar>
+             <p:toolbarGroup  align="left">
+               <p:commandButton value="Salvar"
+                                ajax="false"
+                                icon="ui-icon-check"
+                                action="#{carroBean.salvarCarro}"
+                                update="frm"/>
+             </p:toolbarGroup>             
+          
+             <p:toolbarGroup  align="right">
+               <p:commandButton value="Novo"
+                                icon="ui-icon-plus"
+                                action="#{carroBean.novoCarro}"/>
+               <p:button value="Pesquisar"  outcome="carro"/>                 
+             </p:toolbarGroup>             
+          </p:toolbar> 
+          <p:messages/>
+          <div class="ui-fluid">
+          <p:tabView>
+            <p:tab  title="Dados">
+              <p:panelGrid  columns="2" layout="grid"
+                 columnClasses="ui-grid-col-2, ui-grid-col-4">
+                 
+                 <p:outputLabel value="Descrição" for="cbModelo" />
+                 <p:selectOneMenu id="cbModelo"
+                                  value="#{carroBean.carEdicao.modelo}">
+                      <f:selectItem itemLabel="Selecione o modelo" />
+                      <f:selectItems value="#{carroBean.modelos}" 
+                                     var="modelo" 
+                                     itemLabel="#{modelo.descricao}" 
+                                     itemValue="#{modelo}"/>                     
+                 </p:selectOneMenu>
+                   
+			    <p:outputLabel value="Placa" for="placa"/>
+			    <p:inputText id="placa" size="20" maxlength="20" value="#{carroBean.carEdicao.placa}"/>
+			    		
+			    <p:outputLabel value="Cor" for="cor"/>
+			    <p:inputText id="cor" size="20" maxlength="20" value="#{carroBean.carEdicao.cor}"/>
+			    		
+			    <p:outputLabel value="Valor diária" for="valorDiaria"/>
+			    <p:inputText id="valorDiaria" size="20" maxlength="20" value="#{carroBean.carEdicao.vrDiaria}">
+			        <f:convertNumber type="number" />
+			    </p:inputText>
+                   
+			    <p:outputLabel value="Chassi" for="chassi"/>
+			    <p:inputText id="chassi" size="20" maxlength="20" value="#{carroBean.carEdicao.chassi}"/>
+                   
+          <p:outputLabel value="Foto"/>
+          <h:panelGroup>          
+            <p:commandButton  
+                 rendered="#{carroBean.carEdicao.hasFoto()}"
+                 icon="ui-icon-extlink" title="Imagem"
+                 value="Visualizar imagem"
+                 process="@this"
+                 oncomplete="PF('mostraImagem').show()" 
+                 update=":frm:mostraImagemDialog">
+              <f:setPropertyActionListener 
+                       target="#{fotoAutomovelBean.automovelSelecionado}" 
+                       value="#{carroBean.carEdicao}" />   
+            </p:commandButton>              
+            <p:fileUpload id="id-foto" 
+                 value="#{carroBean.fotoAutomovel}" 
+                 mode="simple"/>
+          </h:panelGroup>   
+                   
+                <p:outputLabel value="Acessórios" for="acessorios"/>
+                <p:selectManyMenu id="acessorios"
+                                  styleClass="many-checkbox"
+                                  value="#{carroBean.carEdicao.acessorios}"
+                                  converter="acessorioConverter">
+                      <f:attribute name="collectionType"
+                                   value="java.util.ArrayList"/>
+                      <f:selectItems value="#{carroBean.acessorios}" 
+                                     var="acessorio"
+                                     itemLabel="#{acessorio.descricao}"
+                                     itemValue="#{acessorio}" />                         
+                </p:selectManyMenu> 
+              </p:panelGrid> 
+            </p:tab>
+          </p:tabView>
+          </div> 
+          
+			<p:dialog header="Imagem"
+                      widgetVar="mostraImagem"
+                      modal="true"
+                      closeOnEscape="true"
+                      id="mostraImagemDialog">
+
+                <p:graphicImage value="#{fotoAutomovelBean.foto}"
+                                cache="false"/>
+
+			</p:dialog>          
+          
+       </h:form>
+  </ui:define> 
+</ui:composition>
