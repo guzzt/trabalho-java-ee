@@ -1,3 +1,4 @@
+
 # Projeto RAD - Trabalho WEB
 
 Trabalho de web avançado utilizando jpaa.
@@ -8,6 +9,12 @@ Trabalho de web avançado utilizando jpaa.
  - [ ] Modificar sistema de login e criar cargos.
  - [ ] Criar classes do diagrama
  - [ ] Criar telas.
+
+## Como importar o projeto.
+
+ 1. **Instalar o Git** tutorial : http://clubedosgeeks.com.br/programacao/desenvolver-com-git-em-eclipse
+ 2. **Importar um projeto** do git utilizando o link do repo.
+ 3. **Realizar os passos do Atenção.**
 
 ## Atenção
 
