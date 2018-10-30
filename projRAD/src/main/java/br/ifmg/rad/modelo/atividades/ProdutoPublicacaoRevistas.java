@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -20,6 +20,8 @@ public class ProdutoPublicacaoRevistas extends Atividade{
 	private static final long serialVersionUID = 1L;
 	
 	
+	public ProdutoPublicacaoRevistas() {}
+	
 	public ProdutoPublicacaoRevistas(Integer id, HashSet<String> autores, String tituloTrabalho, String nomeRevista,
 			Integer volume, Integer numero, Integer paginas, Date dataPublicacao, String iSSN, String dOI,
 			String classificacao) {
@@ -37,7 +39,7 @@ public class ProdutoPublicacaoRevistas extends Atividade{
 		this.classificacao = classificacao;
 	}
 	
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

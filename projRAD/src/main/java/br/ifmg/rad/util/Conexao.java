@@ -1,4 +1,4 @@
-package util;
+package br.ifmg.rad.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

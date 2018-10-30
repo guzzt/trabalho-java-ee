@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -17,6 +17,8 @@ public class ExtensaoCoordenacaoProjExt extends Atividade {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	public ExtensaoCoordenacaoProjExt() {}
+	
 	public ExtensaoCoordenacaoProjExt(Integer id, String tituloProjeto, Date vigenciaDe, Date vigenciaAte,
 			String instituicaoDeFomento, ArrayList<String> alunos_curso) {
 		super();
@@ -28,7 +30,7 @@ public class ExtensaoCoordenacaoProjExt extends Atividade {
 		this.alunos_curso = alunos_curso;
 	}
 	
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

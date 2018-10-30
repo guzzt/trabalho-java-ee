@@ -1,11 +1,11 @@
-package dao;
+package br.ifmg.rad.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import modelo.UsuarioAutenticado;
-import util.Conexao;
+import br.ifmg.rad.modelo.UsuarioAutenticado;
+import br.ifmg.rad.util.Conexao;
 
 public class UsuarioDAO {
 

@@ -1,11 +1,11 @@
-package service;
+package br.ifmg.rad.service;
 
 import java.util.List;
 
 import org.hibernate.service.spi.ServiceException;
 
-import dao.UsuarioDAO;
-import modelo.UsuarioAutenticado;
+import br.ifmg.rad.dao.UsuarioDAO;
+import br.ifmg.rad.modelo.UsuarioAutenticado;
 
 public class UsuarioService {
 

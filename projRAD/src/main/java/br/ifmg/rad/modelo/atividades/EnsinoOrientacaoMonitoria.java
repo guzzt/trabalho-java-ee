@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,12 +15,14 @@ public class EnsinoOrientacaoMonitoria extends Atividade{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
 	private String nomeAluno;
 	private String disciplina;
+	
+	public EnsinoOrientacaoMonitoria() {}
 	
 	public EnsinoOrientacaoMonitoria(Integer id, String nomeAluno, String disciplina) {
 		super();

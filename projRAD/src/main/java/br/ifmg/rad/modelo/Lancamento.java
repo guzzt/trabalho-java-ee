@@ -1,4 +1,4 @@
-package modelo;
+package br.ifmg.rad.modelo;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,11 +1,11 @@
-package service;
+package br.ifmg.rad.service;
 
 import java.util.List;
 
 import org.hibernate.service.spi.ServiceException;
 
-import dao.AtividadeDAO;
-import modelo.Atividade;
+import br.ifmg.rad.dao.AtividadeDAO;
+import br.ifmg.rad.modelo.Atividade;
 
 public class AtividadeService {
 

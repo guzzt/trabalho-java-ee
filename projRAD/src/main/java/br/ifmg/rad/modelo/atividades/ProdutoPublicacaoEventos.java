@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 import java.util.Date;
 import java.util.HashSet;
 
@@ -17,6 +17,7 @@ public class ProdutoPublicacaoEventos extends Atividade{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	public ProdutoPublicacaoEventos() {}
 	
 	public ProdutoPublicacaoEventos(Integer id, HashSet<String> autores, String nomeEvento, String local,
 			Date dataRealizacao, String issn, String doi, String tipoEvento) {
@@ -31,7 +32,7 @@ public class ProdutoPublicacaoEventos extends Atividade{
 		this.tipoEvento = tipoEvento;
 	}
 
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

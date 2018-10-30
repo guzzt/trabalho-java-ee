@@ -1,11 +1,11 @@
-package service;
+package br.ifmg.rad.service;
 
 import java.util.List;
 
 import org.hibernate.service.spi.ServiceException;
 
-import dao.SemestreDAO;
-import modelo.Semestre;
+import br.ifmg.rad.dao.SemestreDAO;
+import br.ifmg.rad.modelo.Semestre;
 
 public class SemestreService {
 

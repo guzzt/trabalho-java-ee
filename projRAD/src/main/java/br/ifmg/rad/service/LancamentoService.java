@@ -1,11 +1,11 @@
-package service;
+package br.ifmg.rad.service;
 
 import java.util.List;
 
 import org.hibernate.service.spi.ServiceException;
 
-import dao.LancamentoDAO;
-import modelo.Lancamento;
+import br.ifmg.rad.dao.LancamentoDAO;
+import br.ifmg.rad.modelo.Lancamento;
 
 public class LancamentoService {
 

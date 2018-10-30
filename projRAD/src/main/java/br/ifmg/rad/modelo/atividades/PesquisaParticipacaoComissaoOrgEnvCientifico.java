@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -16,7 +16,7 @@ public class PesquisaParticipacaoComissaoOrgEnvCientifico extends Atividade {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
+	public PesquisaParticipacaoComissaoOrgEnvCientifico() {}
 	
 	public PesquisaParticipacaoComissaoOrgEnvCientifico(Integer id, String nomeEvento, String classificacao, Date data,
 			String local) {
@@ -27,7 +27,7 @@ public class PesquisaParticipacaoComissaoOrgEnvCientifico extends Atividade {
 		this.data = data;
 		this.local = local;
 	}
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

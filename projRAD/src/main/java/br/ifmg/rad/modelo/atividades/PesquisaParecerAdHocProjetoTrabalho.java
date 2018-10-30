@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +15,7 @@ public class PesquisaParecerAdHocProjetoTrabalho extends Atividade {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	public PesquisaParecerAdHocProjetoTrabalho() {}
 	
 	public PesquisaParecerAdHocProjetoTrabalho(Integer id, String numEdital, String nomeEvento, String campus,
 			Integer numTrabalhosAvaliados) {
@@ -26,7 +27,7 @@ public class PesquisaParecerAdHocProjetoTrabalho extends Atividade {
 		this.numTrabalhosAvaliados = numTrabalhosAvaliados;
 	}
 
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

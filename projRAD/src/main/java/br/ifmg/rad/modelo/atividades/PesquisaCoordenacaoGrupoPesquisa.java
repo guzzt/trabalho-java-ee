@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +15,7 @@ public class PesquisaCoordenacaoGrupoPesquisa extends Atividade {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	public PesquisaCoordenacaoGrupoPesquisa() {}
 	
 	public PesquisaCoordenacaoGrupoPesquisa(Integer id, String nomeDoGrupo, String unidade) {
 		super();
@@ -23,7 +24,7 @@ public class PesquisaCoordenacaoGrupoPesquisa extends Atividade {
 		this.unidade = unidade;
 	}
 	
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

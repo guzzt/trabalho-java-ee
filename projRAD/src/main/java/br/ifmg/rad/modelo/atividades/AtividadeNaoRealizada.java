@@ -1,14 +1,16 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 
 @Entity
 public class AtividadeNaoRealizada extends Atividade {
+
+    public AtividadeNaoRealizada() {}
 	
 	public AtividadeNaoRealizada(Integer id, String justificativa) {
 		super();
@@ -21,7 +23,6 @@ public class AtividadeNaoRealizada extends Atividade {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

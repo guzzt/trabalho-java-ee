@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +15,7 @@ public class ProdutoProducaoInventos extends Atividade{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	public ProdutoProducaoInventos() {}
 	
 	public ProdutoProducaoInventos(Integer id, String titulo, String instituicaoRegistro, Integer numRegistro) {
 		super();
@@ -24,7 +25,7 @@ public class ProdutoProducaoInventos extends Atividade{
 		this.numRegistro = numRegistro;
 	}
 	
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

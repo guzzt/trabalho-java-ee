@@ -1,6 +1,6 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 import java.util.Date;
 import java.util.HashSet;
 
@@ -17,6 +17,7 @@ public class ProdutoPublicacaoLivro extends Atividade{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	public ProdutoPublicacaoLivro() {}
 	
 	public ProdutoPublicacaoLivro(Integer id, HashSet<String> autores, String titulo, String local, String editora,
 			Date data, String isbn) {
@@ -30,7 +31,7 @@ public class ProdutoPublicacaoLivro extends Atividade{
 		this.isbn = isbn;
 	}
 	
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

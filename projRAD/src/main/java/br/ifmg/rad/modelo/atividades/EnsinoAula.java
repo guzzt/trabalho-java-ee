@@ -1,11 +1,11 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 
 @Entity
 public class EnsinoAula extends Atividade{
@@ -15,6 +15,8 @@ public class EnsinoAula extends Atividade{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	public EnsinoAula() {}
+	
 	public EnsinoAula(Integer id, String nomeDisciplina, Integer cargaHorariaSemanal) {
 		super();
 		this.id = id;
@@ -22,7 +24,7 @@ public class EnsinoAula extends Atividade{
 		this.cargaHorariaSemanal = cargaHorariaSemanal;
 	}
 
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	

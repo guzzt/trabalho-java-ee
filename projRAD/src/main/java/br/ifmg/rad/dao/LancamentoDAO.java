@@ -1,11 +1,11 @@
-package dao;
+package br.ifmg.rad.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import modelo.Lancamento;
-import util.Conexao;
+import br.ifmg.rad.modelo.Lancamento;
+import br.ifmg.rad.util.Conexao;
 
 public class LancamentoDAO {
 

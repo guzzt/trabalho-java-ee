@@ -1,4 +1,4 @@
-package modelo.atividades;
+package br.ifmg.rad.modelo.atividades;
 
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import modelo.Atividade;
+import br.ifmg.rad.modelo.Atividade;
 
 @Entity
 public class EnsinoColaboracaoProjEnsino extends Atividade {
@@ -18,6 +18,8 @@ public class EnsinoColaboracaoProjEnsino extends Atividade {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	public EnsinoColaboracaoProjEnsino() {}
 	
 	public EnsinoColaboracaoProjEnsino(Integer id, String tituloProjeto, Date vigenciaDe, Date vigenciaAte,
 			String coordenador, ArrayList<String> alunos_curso) {
@@ -29,7 +31,7 @@ public class EnsinoColaboracaoProjEnsino extends Atividade {
 		this.coordenador = coordenador;
 		this.alunos_curso = alunos_curso;
 	}
-	@Id
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
