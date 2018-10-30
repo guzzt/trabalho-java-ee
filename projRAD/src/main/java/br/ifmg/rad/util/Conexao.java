@@ -1,4 +1,4 @@
-package br.ifmg.rad.util;
+package util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 public class Conexao {
 
 	private final static EntityManagerFactory emf =
-			Persistence.createEntityManagerFactory("radPU");
+			Persistence.createEntityManagerFactory("PontRADPU");
 	private static EntityManager em;
 	
 	private Conexao() {

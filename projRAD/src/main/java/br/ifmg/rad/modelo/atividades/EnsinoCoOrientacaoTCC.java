@@ -1,0 +1,37 @@
+package modelo.atividades;
+
+import modelo.Atividade;
+import java.util.ArrayList;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class EnsinoCoOrientacaoTCC extends Atividade {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
+	public EnsinoCoOrientacaoTCC(Integer id, ArrayList<String> alunos_curso) {
+		super();
+		this.id = id;
+		this.alunos_curso = alunos_curso;
+	}
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
+	
+	private ArrayList<String> alunos_curso;
+
+	public ArrayList<String> getAlunos_curso() {
+		return alunos_curso;
+	}
+	public void setAlunos_curso(ArrayList<String> alunos_curso) {
+		this.alunos_curso = alunos_curso;
+	}
+}
